@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Myy Fresh Flower - Buket Bunga Terbaik</title>
+
+  <style>
+    /* General Styling */
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      color: #333333;
+      background-color: #FDF8F9;
+    }
+
+    /* Header */
+    header {
+      background-color: #8a8fa3;
+      color: #FFFFFF;
+      padding: 15px 0;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header .logo h1 {
+      margin: 0;
+      font-size: 28px;
+      font-family: 'Georgia', serif;
+    }
+
+    header nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    header nav ul li {
+      margin-left: 25px;
+    }
+
+    header nav ul li a {
+      color: #FFFFFF;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    header nav ul li a:hover {
+      color: #FFE4E1;
+    }
+
+    /* Hero Section */
+    .hero-section {
+      background-image: url('https://i.pinimg.com/736x/3e/58/df/3e58dfe5c4465d3aa440c24d3ee02c1e.jpg');
+      background-size: cover;
+      background-position: center;
+      color: #FFFFFF;
+      text-align: center;
+      padding: 300px 20px;
+      position: relative;
+    }
+
+    .hero-section::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: rgba(51, 51, 51, 0.5);
+      z-index: 1;
+    }
+
+    .hero-section h2,
+    .hero-section p,
+    .hero-section .btn-primary {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-section h2 {
+      font-size: 50px;
+      margin-bottom: 20px;
+      font-family: 'Georgia', serif;
+    }
+
+    .hero-section p {
+      font-size: 20px;
+      margin-bottom: 40px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Button */
+    .btn-primary {
+      background-color: #e2a9b0;
+      color: #FFFFFF;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 5px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .btn-primary:hover {
+      background-color: #d18b96;
+      transform: translateY(-3px);
+    }
+
+    /* Features Section */
+    .features-section {
+      padding: 80px 0;
+      background-color: #FFFFFF;
+      text-align: center;
+    }
+
+    .features-section h3 {
+      font-size: 36px;
+      margin-bottom: 50px;
+      color: #8a8fa3;
+      font-family: 'Georgia', serif;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 100px;
+    }
+
+    .feature-item {
+      background-color: #FFF0F5;
+      padding: 30px;
+      border-radius: 100px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .feature-item img {
+      margin-bottom: 20px;
+      width: 230px;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 20px;
+    }
+
+    .feature-item h4 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: #c08081;
+    }
+
+    .feature-item p {
+      font-size: 16px;
+      color: #555555;
+    }
+
+    /* Pricing and About sections - basic styling */
+.pricing-section, .about-section {
+padding: 60px 0;
+text-align: center;
+}
+.pricing-section h3, .about-section h3 {
+font-size: 36px;
+margin-bottom: 20px;
+color: #2c3e50;
+}
+
+/* Wrapper section dengan gradien lembut */
+.pricing-section,
+.about-section {
+  padding: 60px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #f5f6fa 0%, #e4ebf5 100%);
+}
+
+/* Judul dengan efek material “floating” */
+.pricing-section h3,
+.about-section h3 {
+  font-size: 2.25rem; /* ~36px */
+  margin-bottom: 20px;
+  color: #34495e;
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  background: white;
+  border-radius: 50px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Underline dekoratif animasi */
+.pricing-section h3::after,
+.about-section h3::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 4px;
+  background-color: #555;
+  margin: 8px auto 0;
+  border-radius: 2px;
+  transition: width 0.5s ease;
+}
+
+.pricing-section h3:hover::after,
+.about-section h3:hover::after {
+  width: 60px;
+}
+
+/* ===== Pricing Section ===== */
+.pricing-section {
+  padding: 60px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #f0eafc 0%, #fff8f5 100%);
+}
+
+.pricing-section h3 {
+  font-size: 2.25rem;
+  margin-bottom: 15px;
+  color: #df3165;
+}
+
+.pricing-section p {
+  max-width: 700px;
+  margin: 0 auto 40px;
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* ===== Pricing Cards Grid ===== */
+.pricing-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+/* ===== Individual Card ===== */
+.pricing-card {
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(6px);
+  border-radius: 20px;
+  padding: 30px 20px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.pricing-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 16px 32px rgba(0,0,0,0.18);
+}
+
+/* ===== Card Typography ===== */
+.pricing-card h4 {
+  font-size: 1.5rem;
+  color: #34495e;
+  margin-bottom: 10px;
+}
+
+.pricing-card .price {
+  font-size: 2.5rem;
+  color: #ff0000;
+  margin: 15px 0;
+}
+
+.pricing-card ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.pricing-card ul li {
+  margin: 8px 0;
+  padding-left: 10px;
+}
+
+/* ===== Action Button ===== */
+.btn-buy {
+  display: inline-block;
+  padding: 12px 28px;
+  background: #f85c2c;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  
+}
+
+.btn-buy::before {
+  content: "🛒 ";
+  margin-right: 6px;
+}
+
+.btn-buy:hover {
+  background-color: #d18828;
+  transform: translateY(-3px);
+   
+}
+
+/* ===== Responsive Adjustments ===== */
+@media (max-width: 600px) {
+  .pricing-section h3 {
+    font-size: 1.75rem;
+  }
+  .pricing-section .price {
+    font-size: 2rem;
+  }
+  .pricing-card {
+    padding: 20px;
+  }
+}
+
+
+
+/* Deskripsi sektion */
+.pricing-section p,
+.about-section p {
+  max-width: 720px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Layout kartu responsif grid */
+.pricing-section .cards,
+.about-section .cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+/* Kartu bergaya “glassmorphism” */
+.pricing-section .card,
+.about-section .card {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Bayangan dan gerakan saat hover */
+.pricing-section .card:hover,
+.about-section .card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 16px 32px rgba(0,0,0,0.15);
+}
+
+/* Tombol pada kartu */
+.pricing-section .card .btn,
+.about-section .card .btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 28px;
+  background-color: #555;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover tombol */
+.pricing-section .card .btn:hover,
+.about-section .card .btn:hover {
+  background-color: #555;
+  transform: translateY(-2px);
+}
+
+/* Adaptasi perangkat mobile */
+@media (max-width: 600px) {
+  .pricing-section h3,
+  .about-section h3 {
+    font-size: 1.75rem;
+    padding: 8px 16px;
+  }
+
+  .pricing-section .card,
+  .about-section .card {
+    padding: 20px;
+  }
+}
+
+.feature-item .btn-cart {
+  display: inline-block;
+  margin: 12px auto 0;
+  padding: 10px 24px;
+  background-color: #555;
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.feature-item .btn-cart:hover {
+  background-color: #c08081;
+  transform: translateY(-2px);
+}
+
+
+.feature-item .btn-cart.ripple {
+  background-position: center;
+  transition: background 0.6s;
+}
+.feature-item .btn-cart.ripple:hover {
+  background: #e66a3d radial-gradient(circle, transparent 1%, #e66a3d 1%) center/15000%;
+}
+.feature-item .btn-cart.ripple:active {
+  background-color: #cc5931;
+  background-size: 100%;
+  transition: background 0s;
+}
+
+/* Efek klik */
+.feature-item .btn-cart:active {
+  transform: scale(0.97);
+}
+
+.btn-cart::before {
+  content: "🛒 ";
+  margin-right: 6px;
+}
+
+
+
+    /* Footer */
+    footer {
+      background-color: #8a8fa3;
+      color: #FFFFFF;
+      padding: 30px 0;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    footer .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    footer .social-links a {
+      color: #FFFFFF;
+      text-decoration: none;
+      margin-left: 15px;
+      transition: color 0.3s ease;
+    }
+
+    footer .social-links a:hover {
+      color: #FFE4E1;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      header .container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      header nav ul {
+        margin-top: 15px;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      header nav ul li {
+        margin: 10px 0;
+      }
+
+      .hero-section h2 {
+        font-size: 36px;
+      }
+
+      .hero-section p {
+        font-size: 18px;
+      }
+
+      .feature-grid {
+        grid-template-columns: 1fr;
+      }
+
+      footer .container {
+        flex-direction: column;
+      }
+
+      footer .social-links {
+        margin-top: 15px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-section {
+        padding: 60px 0;
+      }
+
+      .hero-section h2 {
+        font-size: 30px;
+      }
+
+      .btn-primary {
+        padding: 12px 25px;
+        font-size: 16px;
+      }
+
+      .features-section h3 {
+        font-size: 28px;
+      }
+    }
+    .cart-toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(52, 73, 94, 0.9);
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 25px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  opacity: 0;
+  animation: fadeInOut 3s ease forwards;
+  z-index: 1000;
+}
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translateY(20px); }
+  10%, 90% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(20px); }
+}
+/* Import Google Fonts: Indie Flower & Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Montserrat:wght@300;400;600&display=swap');
+
+/* Section About */
+.about-section {
+  padding: 60px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #fffaf0 0%, #f4f1ea 100%);
+  position: relative;
+}
+
+.about-section h3 {
+  font-family: 'Indie Flower', cursive;
+  font-size: 2.5rem;
+  color: #8b5e3c;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+
+.about-section p,
+.about-section li {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  color: #5a4a3b;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 12px auto;
+}
+
+.about-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px auto;
+}
+
+.about-section ul li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 12px;
+}
+
+.about-section ul li::before {
+  content: "🌿";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 600px) {
+  .about-section {
+    padding: 40px 10px;
+  }
+  .about-section h3 {
+    font-size: 2rem;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <div class="logo">
+        <h1>Myy Fresh Flower</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#features">Koleksi</a></li>
+          <li><a href="#pricing">Harga</a></li>
+          <li><a href="#about">Tentang Kami</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="hero" class="hero-section">
+      <div class="container">
+        <h2>Hiasi Momen Anda dengan Buket Bunga Segar</h2>
+        <p>Solusi bunga terbaik untuk hadiah, pernikahan, dan hari spesial lainnya.</p>
+        <button id="cta-button" class="btn-primary">Pesan Sekarang</button>
+      </div>
+    </section>
+
+    <section id="features" class="features-section">
+      <div class="container">
+        <h3>Koleksi Unggulan Kami</h3>
+        <div class="feature-grid">
+          <div class="feature-item">
+            <img src="https://i.pinimg.com/736x/95/85/95/9585951744b1422020c042dc477d957a.jpg" alt="Buket Bunga Merah">
+            <h4>Fresh Red Flower</h4>
+            <p>Rp.120.000</p>
+             <button class="btn-cart">Tambah ke Keranjang</button>
+          </div>
+          <div class="feature-item">
+            <img src="https://i.pinimg.com/736x/68/e3/52/68e352e7eb18d4ea3988123f8787d4d4.jpg" alt="Buket Bunga Biru Muda">
+            <h4>Light Blue Fresh Flower</h4>
+            <p>Rp.90.000</p>
+             <button class="btn-cart">Tambah ke Keranjang</button>
+          </div>
+          <div class="feature-item">
+            <img src="https://i.pinimg.com/736x/09/62/cf/0962cfa078cf0b3ef0fe690b7a892a39.jpg" alt="Buket Pink dan Putih">
+            <h4>Pink & White Bouquet</h4>
+            <p>Rp.70.000</p>
+             <button class="btn-cart">Tambah ke Keranjang</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+
+
+     <section id="features" class="features-section">
+      <div class="container">
+        
+        <div class="feature-grid">
+          <div class="feature-item">
+            <img src="https://i.pinimg.com/736x/f6/7c/83/f67c8337a2aec20821cfb2bdc9bb928f.jpg" alt="Buket Bunga Hitam">
+            <h4>Black Elegan Flower</h4>
+            <p>Rp.85.000</p>
+             <button class="btn-cart">Tambah ke Keranjang</button>
+          </div>
+          <div class="feature-item">
+            <img src="https://i.pinimg.com/736x/89/69/67/89696764a79913a2164c9464f2feccdc.jpg" alt="Buket Bunga Mix">
+            <h4>Mix Fresh Flower</h4>
+            <p>Rp.115.000</p>
+             <button class="btn-cart">Tambah ke Keranjang</button>
+          </div>
+          <div class="feature-item">
+            <img src="https://i.pinimg.com/736x/99/e5/ce/99e5ce230f4f0ba954f4d1faff5dd98a.jpg" alt="Buket Pink dan Putih">
+            <h4>Violet Flower</h4>
+            <p>Rp.120.000</p>
+             <button class="btn-cart">Tambah ke Keranjang</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+     <section id="features" class="features-section">
+      <div class="container">
+       
+        <div class="feature-grid">
+          <div class="feature-item">
+            <img src="https://i.pinimg.com/736x/20/03/fb/2003fb0cd947aaeb3508be0ff34be628.jpg" alt="Buket Bunga Merah">
+            <h4>White Flower</h4>
+            <p>Rp.85.000</p>
+             <button class="btn-cart">Tambah ke Keranjang</button>
+          </div>
+          <div class="feature-item">
+            <img src="https://i.pinimg.com/736x/1d/b7/e3/1db7e3279c4ce1a4e130b5c3b6171a05.jpg" alt="Buket Bunga Biru Muda">
+            <h4>Black and White Flower</h4>
+            <p>Rp.110.000</p>
+             <button class="btn-cart">Tambah ke Keranjang</button>
+          </div>
+          <div class="feature-item">
+            <img src="https://i.pinimg.com/736x/0e/90/51/0e9051b3f7118a7adad3f53f6202ab7d.jpg" alt="Buket Pink dan Putih">
+            <h4>Elegan White Flower</h4>
+            <p>Rp.115.000</p>
+             <button class="btn-cart">Tambah ke Keranjang</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+     <section id="features" class="features-section">
+      <div class="container">
+        
+        <div class="feature-grid">
+          <div class="feature-item">
+            <img src="https://i.pinimg.com/736x/2c/ab/4d/2cab4da46a627ca6cb1d1051e4074059.jpg" alt="Buket Bunga Merah">
+            <h4>Mix Pastel Flower</h4>
+            <p>Rp.120.000</p>
+             <button class="btn-cart">Tambah ke Keranjang</button>
+          </div>
+          <div class="feature-item">
+            <img src="https://i.pinimg.com/736x/ae/1b/d4/ae1bd4421c19857b4ad35762c2266ee8.jpg" alt="Buket Bunga Biru Muda">
+            <h4>Black and White Flower</h4>
+            <p>Rp.90.000</p>
+             <button class="btn-cart">Tambah ke Keranjang</button>
+          </div>
+          <div class="feature-item">
+            <img src="https://i.pinimg.com/736x/15/b0/85/15b085b24fbdd5d190dfb413c8794990.jpg" alt="Buket Pink dan Putih">
+            <h4>Special White Flower</h4>
+            <p>Rp.130.000</p>
+             <button class="btn-cart">Tambah ke Keranjang</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+     <section id="features" class="features-section">
+      <div class="container">
+        <div class="feature-grid">
+          <div class="feature-item">
+            <img src="https://i.pinimg.com/736x/fa/f8/75/faf8758af65f1d518b1f89fc54d81ca3.jpg" alt="#">
+            <h4>Pink Pastel Flower</h4>
+            <p>Rp.140.000</p>
+             <button class="btn-cart">Tambah ke Keranjang</button>
+          </div>
+          <div class="feature-item">
+            <img src="https://i.pinimg.com/736x/3b/c3/7d/3bc37d549e1c9ea4448da436d6c81e94.jpg" alt="Buket Bunga Biru Muda">
+            <h4>Red Special Flower</h4>
+            <p>Rp.120.000</p>
+             <button class="btn-cart">Tambah ke Keranjang</button>
+          </div>
+          <div class="feature-item">
+            <img src="https://i.pinimg.com/736x/26/6c/bf/266cbf7c385c7ec807d823fe429f1682.jpg" alt="Buket Pink dan Putih">
+            <h4>Rainbow Metalic Flower</h4>
+            <p>Rp.145.000</p>
+             <button class="btn-cart">Tambah ke Keranjang</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="pricing" class="pricing-section">
+<div class="container">
+   <h3>Pilihan Harga Fleksibel</h3>
+    <p>Pilih paket buket bunga sesuai kebutuhan dan momen spesial Anda:</p>
+    <div class="pricing-cards">
+      <div class="pricing-card">
+        <h4>Paket Hemat</h4>
+        <div class="price">Rp 170.000</div>
+        <ul>
+          <li>Small bouquet (5–7 tangkai)</li>
+          <li>Bunga lokal segar</li>
+          <li>Gratis pengiriman area Kediri</li>
+        </ul>
+        <button class="btn-buy">Pilih Paket</button>
+      </div>
+      <div class="pricing-card">
+        <h4>Paket Favorit</h4>
+        <div class="price">Rp 350.000</div>
+        <ul>
+          <li>Medium bouquet (10–12 tangkai)</li>
+          <li>Bunga lokal + impor</li>
+          <li>Pita & kemasan eksklusif</li>
+          <li>Gratis pengiriman + kartu ucapan</li>
+        </ul>
+        <button class="btn-buy">Pilih Paket</button>
+      </div>
+      <div class="pricing-card">
+        <h4>Paket Premium</h4>
+        <div class="price">Rp 950.000</div>
+        <ul>
+          <li>Large bouquet (15+ tangkai)</li>
+          <li>Jenis bunga premium (mawar, lilies, dan lainnya)</li>
+          <li>Kemasan kotak dekoratif + aksesoris</li>
+          <li>Pick-up/tampil mewah</li>
+        </ul>
+        <button class="btn-buy">Pilih Paket</button>
+</div>
+</section>
+<section id="about" class="about-section">
+<div class="container">
+<h3>Tentang Myy Fresh Flower</h3>
+<p>
+
+Myy Fresh Flower lahir dari cinta terhadap keindahan alami bunga dan misi menghadirkan momen istimewa Anda melalui rangkaian bunga yang hangat dan bermakna. Sejak 2020, kami menawarkan berbagai produk yang selalu dikurasi dengan penuh cinta, mulai dari fresh bouquet, vase arrangement, hingga blooming box, menggunakan bunga segar lokal dan impor yang dipilih setiap hari untuk menjaga kualitas dan daya tahan. Kami mendukung petani lokal demi keberlanjutan dan rantai pasok yang kuat, serta menyediakan layanan pickup maupun pengiriman cepat dengan perawatan maksimal. Filosofi kami, “#BloomWithLove”, adalah wujud ketulusan dan kehangatan dalam setiap rangkaian, karena bunga bukan sekadar tanaman, tetapi pembawa pesan dan kenangan tak terlupakan .
+</p>
+
+</div>
+</section>
+  </main>
+
+  <footer>
+  <div class="container">
+    <p class=>© 2025 Myy Fresh Flower. Hak Cipta Dilindungi.</p>
+    <nav class="social-links" aria-label="Sosial Media">
+      <a href="mailto:nurma.mei53@sma.belajar.id" aria-label="Gmail">Gmail</a>
+      <a href="https://www.instagram.com/myy.ltfya_11" aria-label="Instagram">istragram</a>
+      <a href="https:/wa.me/+6281949573562" aria-label="WhatsApp">WhatsApp</a>
+    </nav>
+  </div>
+</footer>
+
+
+ <script src="script.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.btn-cart').forEach(btn => {
+    btn.addEventListener('click', () => {
+      // Toast sederhana
+      const toast = document.createElement('span');
+      toast.innerText = '🛒 Ditambahkan ke keranjang';
+      toast.className = 'cart-toast';
+      document.body.append(toast);
+      setTimeout(() => toast.remove(), 2000);
+    });
+  });
+});
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.btn-buy').forEach(btn => {
+    btn.addEventListener('click', () => {
+      // Toast sederhana
+      const toast = document.createElement('span');
+      toast.innerText = '🛒 Ditambahkan ke keranjang';
+      toast.className = 'cart-toast';
+      document.body.append(toast);
+      setTimeout(() => toast.remove(), 2000);
+    });
+  });
+});
+</script>
+</body>
+</html>
